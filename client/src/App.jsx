@@ -2,14 +2,18 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Sidebar from "./components/Sidebar";
+import CreatePost from "./components/CreatePost";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Footer />
+    <div className="app-container">
       <Sidebar />
-    </>
+      <div className="content">
+        <Navbar />
+        <CreatePost />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
