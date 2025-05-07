@@ -5,9 +5,6 @@ function Post({ post }) {
         <div className="card-body">
           <h5 className="card-title">{post.body}</h5>
           <p className="card-text">{post.body}</p>
-          <a href="#" className="btn btn-primary">
-            Go somewhere
-          </a>
         </div>
       </div>
     </>
