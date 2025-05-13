@@ -8,6 +8,9 @@ function PostList() {
   const { postList, addInitialPost } = useContext(PostListData);
   const [fetching, setFetching] = useState(false);
 
+  const controller = new AbortController();
+  const _signal = controller.signal;
+
   useEffect(() => {
     setFetching(true);
     fetch("https://dummyjson.com/posts")
@@ -18,6 +21,7 @@ function PostList() {
       });
     return () => {
       console.log("Cleaning Up useEffect");
+      controller.abort();
     };
   }, []);
 
